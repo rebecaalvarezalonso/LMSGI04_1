@@ -53,4 +53,4 @@ Todos los documentos han sido comprobados mediante validadores XML/JSON y el Fee
 
 - **Repositorio GitHub:** *(https://github.com/rebecaalvarezalonso/LMSGI04_1
 )*  
-- **Vídeo Loom:** *(añadir enlace aquí)*  
+- **Vídeo Loom:** *([añadir enlace aquí](https://www.loom.com/share/009767879576463cad66c9eb6ef4ebc4))*  
