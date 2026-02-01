@@ -1,7 +1,4 @@
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # TASCA LMSGI04.1 – XML, XSD, JSON Schema, RSS y Atom # 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-
 **Alumna:** Rebeca Álvarez Alonso  
 **Curso:** 2025/2026  
 **Asignatura:** Lenguajes de Marcas (LMSGI)  
@@ -10,7 +7,9 @@
 ## Estructura del repositorio
 
 LMSGI04_1/
+
 ├── ejercicio1/
+
 │ ├── cifp.dtd
 │ ├── cifp_dtd.xml
 │ ├── cifp.xsd
