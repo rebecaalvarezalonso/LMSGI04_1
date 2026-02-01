@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cifp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="cifp.xsd">
+
+  <alumne id="1">
+    <nom>Maria</nom>
+    <llinatges>García Pons</llinatges>
+    <data_naixement>2006-03-12</data_naixement>
+    <correu>maria.garcia@cifp.cat</correu>
+    <telefon>600123456</telefon>
+    <adreca>C/ Major 10, Inca</adreca>
+    <data_matricula>2025-09-12</data_matricula>
+    <curs>DAM</curs>
+  </alumne>
+
+  <professor id="10">
+    <nom>Laura</nom>
+    <llinatges>Ferrer Vidal</llinatges>
+    <data_incorporacio>2020-09-01</data_incorporacio>
+    <departament>Informàtica</departament>
+
+    <assignatura id_assignatura="100">
+      <nom_assignatura cicle="DAM">Bases de Dades</nom_assignatura>
+      <data_inici>2025-09-15</data_inici>
+      <data_final>2026-06-20</data_final>
+    </assignatura>
+
+  </professor>
+
+</cifp>

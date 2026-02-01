@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cifp.schema.json",
+  "title": "CIFP Pau Casesnoves - Alumnos y Profesores",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["cifp"],
+  "properties": {
+    "cifp": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "alumne": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/alumne" }
+        },
+        "professor": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/professor" }
+        }
+      },
+      "anyOf": [
+        { "required": ["alumne"] },
+        { "required": ["professor"] }
+      ]
+    }
+  },
+  "$defs": {
+    "cicle": {
+      "type": "string",
+      "enum": ["DAM", "DAW", "ASIX", "SMX", "SEIA", "ER", "AUT"]
+    },
+    "departament": {
+      "type": "string",
+      "enum": ["Informàtica", "Electricitat", "Automoció"]
+    },
+    "personaBase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "nom", "llinatges"],
+      "properties": {
+        "id": { "type": "integer" },
+        "nom": { "type": "string" },
+        "llinatges": { "type": "string" },
+        "data_naixement": { "type": "string" },
+        "correu": { "type": "string" },
+        "telefon": { "type": "string" },
+        "adreca": { "type": "string" }
+      }
+    },
+    "alumne": {
+      "allOf": [
+        { "$ref": "#/$defs/personaBase" },
+        {
+          "type": "object",
+          "required": ["data_matricula", "curs"],
+          "properties": {
+            "data_matricula": { "type": "string" },
+            "curs": { "$ref": "#/$defs/cicle" }
+          }
+        }
+      ]
+    },
+    "assignatura": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id_assignatura", "nom_assignatura", "cicle"],
+      "properties": {
+        "id_assignatura": { "type": "integer" },
+        "nom_assignatura": { "type": "string" },
+        "cicle": { "$ref": "#/$defs/cicle" },
+        "data_inici": { "type": "string" },
+        "data_final": { "type": "string" }
+      }
+    },
+    "professor": {
+      "allOf": [
+        { "$ref": "#/$defs/personaBase" },
+        {
+          "type": "object",
+          "required": ["data_incorporacio", "departament"],
+          "properties": {
+            "data_incorporacio": { "type": "string" },
+            "departament": { "$ref": "#/$defs/departament" },
+            "assignatura": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/assignatura" }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
