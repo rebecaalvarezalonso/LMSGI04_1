@@ -11,14 +11,23 @@ LMSGI04_1/
 ├── ejercicio1/
 
 │ ├── cifp.dtd
+
 │ ├── cifp_dtd.xml
+
 │ ├── cifp.xsd
+
 │ ├── cifp_xsd.xml
+
 │ ├── cifp.schema.json
+
 │ └── cifp.json
+
 ├── ejercicio2/
+
 │ ├── coches.rss.xml
+
 │ └── coches.atom.xml
+
 └── README.md
 
 ## Ejercicio 1 – CIFP Pau Casesnoves
